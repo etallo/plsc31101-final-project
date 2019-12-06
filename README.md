@@ -1,48 +1,43 @@
-This is a template you can use for your final projects (as well other projects where you need to post replication code.) Fill in each section with information on your own project.
-
 ## Short Description
 
-Give a short, 1-2 paragraph description of your project. Focus on the code, not the theoretical / substantive side of things. 
+The goal of this project to webscrape terrorist incident and date data from roughly 19 tables located on the South Asia Terrorism Portal (SATP); extract the locations, dates, and terrorist organizations named in the incidents; and visualize the data gathered.   
 
 ## Dependencies
 
 List what software your code depends on, as well as version numbers, like so:.
 
 1. R, 3.6.1
+2. R Studio, Version 1.2.5001
 
-In your scripts, includes commands that `require()` packages.
+Packages: tidyverse, rvest, lubridate, stringr, purrr, tm
 
 ## Files
 
-List all files (other than `README.md` and `Final-Project.RProj`) contained in the repo, along with a brief description of each one, like so:
-
 #### /
 
-1. Narrative.Rmd: Provides a 3-5 page narrative of the project, main challenges, solutions, and results.
-2. Narrative.pdf: A knitted pdf of 00_Narrative.Rmd. 
-3. Slides.XXX: Your lightning talk slides, in whatever format you prefer.
+1. Narrative final project.Rmd: Provides a 5 page narrative of the project, main challenges, and visualizations. 
+2. Narrative-final-project.pdf: A knitted pdf of Narrative final project.Rmd. 
+3. Slides.ppt: My lightning talk slides. 
 
 #### Code/
-1. 01_collect-nyt.R: Collects data from New York Times API and exports data to the file nyt.csv
-2. 02_merge-data.R: Loads, cleans, and merges the raw Polity and NYT datasets into the Analysis Dataset.
-3. 03_analysis.R: Conducts descriptive analysis of the data, producing the tables and visualizations found in the Results directory.
+1. webscrape-code.R: Scrapes and cleans date/incident data from 19 tables on the South Asia Terrorism Portal. The scraped dataframe from this file can be found in the Data directory. 
+2. entity.extraction.code.R: Extracts Indian districts, states, and terrorist organizations named in scraped incident text and writes a .csv file containing the named entity data. The processed dataframe can be found in the Data directory. 
+3. visualization-code.R: Conducts descriptive analysis of the data, producing the visualizations found in the Results directory.
 
 #### Data/
 
-1. polity.csv: The PolityVI dataset, available here: http://www.systemicpeace.org/inscrdata.html
-2. nyt.csv: Contains data from the New York Times API collected via collect-nyt.ipynb . Includes information on all articles containing the term "Programmer Cat", 1980-2010.
-3. analysis-dataset.csv: The final Analysis Dataset derived from the raw data above. It includes country-year values for all UN countries 1980-2010, with observations for the following variables: 
-    - *ccode*: Correlates of War numeric code for country observation
-    - *year*: Year of observation
-    - *polity*: PolityVI score
-    - *nyt*: Number of New York Times articles about "Programmer Cat"
+1. scraped-satp-india-incidents.csv: Contains dataframe of major terrorist incidents in India and corresponding dates. The data were scraped from the 2000-2018 tables available at the South Asia Terrorism Portal (starting with this link): https://www.satp.org/other-data/india/major-incidents_2000 
+2. processed-satp-india-incidents.csv: Contains dataframe of major terrorist incidents, corresponding dates, and the states, districts, and terrorist organizations named in the text of the major terrorist incidents.  
+3. list-of-jk-districts.csv: Contains list used to extract the named districts of the disputed Indian state of Jammu and Kashmir. Compiled from Wikipedia and personal knowledge. 
+4. list-of-states.csv: Contains list used to extract named Indian states within the incident. Compiled from Wikipedia. 
+5. named-terrorist-orgs.csv: Contains list used to extract  named terrorist organizations within the incident data. Compiled from Wikipedia and personal knowledge. 
 
 #### Results/
 
-1. coverage-over-time.jpeg: Graphs the number of articles about each region over time.
-2. regression-table.txt: Summarizes the results of OLS regression, modelling *nyt* on a number of covariates.
+1. incidents-by-year.png: Plot of incident counts by year. 
+2. most-attributed-orgs.png: Plot of the top 10 most named terrorist organizations. 
+3. most-terrorism-states.png: Plot of the top 10 most named states in India.  
 
 ## More Information
 
-Include any other details you think your user might need to reproduce your results. You may also include other information such as your contact information, credits, etc.
-
+This project is part of a larger, co-authored academic endeavor. My contact information is tallo@uchicago.edu if you have any questions. 
