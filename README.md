@@ -1,6 +1,6 @@
 ## Short Description
 
-The goal of this final project was to webscrape terrorist incident and date information from roughly 19 tables located on the South Asia Terrorism Portal (SATP); extract the locations, dates, and terrorist organizations named in the incident descriptions; and visualize the data gathered.   
+The goal of this final project was to webscrape data on terrorist incidents in India from roughly 19 tables located on the South Asia Terrorism Portal (SATP); extract the locations, dates, and terrorist organizations named in the incident descriptions; and visualize the data gathered.   
 
 ## Dependencies
 
@@ -8,11 +8,11 @@ The goal of this final project was to webscrape terrorist incident and date info
 2. R Studio, Version 1.2.5001
 
 Required:
-library(tidyverse)
-library(rvest)
-library(lubridate)
-library(stringr)
-library(purrr)
+library(tidyverse),
+library(rvest),
+library(lubridate),
+library(stringr),
+library(purrr),
 library(tm)
 
 ## Files
