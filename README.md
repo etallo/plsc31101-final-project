@@ -1,28 +1,34 @@
 ## Short Description
 
-The goal of this project to webscrape terrorist incident and date data from roughly 19 tables located on the South Asia Terrorism Portal (SATP); extract the locations, dates, and terrorist organizations named in the incidents; and visualize the data gathered.   
+The goal of this final project was to webscrape terrorist incident and date information from roughly 19 tables located on the South Asia Terrorism Portal (SATP); extract the locations, dates, and terrorist organizations named in the incident descriptions; and visualize the data gathered.   
 
 ## Dependencies
 
 1. R, 3.6.1
 2. R Studio, Version 1.2.5001
 
-Packages: tidyverse, rvest, lubridate, stringr, purrr, tm
+Required:
+library(tidyverse)
+library(rvest)
+library(lubridate)
+library(stringr)
+library(purrr)
+library(tm)
 
 ## Files
 
-#### /
+#### General 
 
 1. Narrative final project.Rmd: Provides a 5 page narrative of the project, its main challenges, and visualizations. 
 2. Narrative-final-project.pdf: A knitted pdf of Narrative final project.Rmd. 
 3. Slides.pptx: My lightning talk slides. 
 
-#### Code/
+#### Code 
 1. webscrape-code.R: Scrapes and cleans date/incident data from 19 tables on the South Asia Terrorism Portal. The scraped dataframe from this file can be found in the Data directory. 
 2. entity-extraction-code.R: Extracts Indian districts, states, and terrorist organizations named in scraped incident text and writes a .csv file containing the named entity data. The processed dataframe can be found in the Data directory. 
 3. visualization-code.R: Conducts descriptive analysis of the data, producing the visualizations found in the Results directory.
 
-#### Data/
+#### Data
 
 1. scraped-satp-india-incidents.csv: Contains dataframe of major terrorist incidents in India and corresponding dates. The data were scraped from the 2000-2018 tables available at the South Asia Terrorism Portal (starting with this link): https://www.satp.org/other-data/india/major-incidents_2000 
 2. processed-satp-india-incidents.csv: Contains dataframe of major terrorist incidents, corresponding dates, and the states, districts, and terrorist organizations named in the text of the major terrorist incidents.  
@@ -38,4 +44,4 @@ Packages: tidyverse, rvest, lubridate, stringr, purrr, tm
 
 ## More Information
 
-This project is part of a larger, co-authored academic endeavor. My contact information is tallo@uchicago.edu if you have any questions. 
+This project is part of a larger, co-authored academic endeavor on how terrorist incidents can lead to interstate crises in South Asia. My contact information is tallo@uchicago.edu if you have any questions. 
