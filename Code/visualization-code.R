@@ -62,7 +62,10 @@ plot3 <- ggplot(data = org_df, aes(x=reorder(attributed.organizations,n), y = n)
   xlab("State") +
   ylab("Number of Incidents") +
   ggtitle("Top 10 Most Attributed Terrorist Organizations, 2000-2018") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
 
 print(plot3)  
 
+ggsave(filename="incidents-by-year.jpeg", plot=plot1)
+ggsave(filename="most-terrorism-states.jpeg", plot=plot2)
+ggsave(filename="most-attributed-orgs.jpeg", plot=plot3)
